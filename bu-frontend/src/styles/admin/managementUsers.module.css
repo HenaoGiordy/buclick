@@ -1,0 +1,163 @@
+/*************************** Controlan el responsive *********************************/
+@media (max-width: 768px) { /*Celuares pequeños y muy pequeños*/
+  html{
+    font-size: clamp(1rem, 3.5vw, 7vw);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) { /*Tablets*/
+  html{
+    font-size: clamp(1rem, 2vw, 4vw);
+  }
+}
+/***********************************************************************************************/
+#code{
+  width: min-content;
+}
+
+#name{
+  width: min-content;
+}
+
+#active{
+  width: 3rem;
+  background-color: white;  
+  border-color: transparent;
+}
+
+#edit{
+  width: min-content;
+}
+
+#email{
+  width: 11rem;
+}
+
+#code,
+#name,
+#email{
+  /* width: 11.9375rem; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menuGrant{
+  margin-top: 6rem;
+  position: relative;
+}
+
+.displayNone{
+  display: none;
+}
+
+.flexEnd{
+  align-self: flex-end;
+}
+
+.contentTitles{
+  width: 100%;
+  margin-top: 1rem;
+  & h3{
+    font-weight: 500;
+    font-size: 1.375rem;
+    color: var(--red);
+  }
+  & p{
+    font-weight: 300;
+    font-size: 15px;
+  }
+}
+
+.marginTable{
+  margin-top: 1.625rem;
+  text-align: left;
+  margin-bottom: 0 !important;
+}
+
+.buttonImport{
+  z-index: 999;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 1.25rem;
+  margin-right: 1.75rem;
+}
+
+.buttonLoad{
+  border-radius: .3125rem;
+  background-color: var(--gray);
+  color: var(--gray-dark);
+}
+
+.buttonSearch{
+  padding-inline: .6875rem;
+}
+
+.buttonImport,
+.buttonSearch,
+.buttonDeleteBen{
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+}
+
+#code,
+#name,
+#email,
+#active,
+#edit{
+  display: block;
+  height: 2.375rem;
+  margin: auto;
+}
+
+.buttonLoad{
+  width: 11.25rem;
+  border-color: transparent;
+  transition: box-shadow 0.3s ease-in-out; /* Suaviza la transición */
+}
+
+.buttons{
+  margin-top: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.buttonImport{
+  height: 1.875rem;
+  width: 5.625rem;
+}
+
+.buttonImport,
+.buttonSearch,
+.buttonDeleteBen{
+  border-radius: .5rem;
+}
+
+.buttonImport:hover,
+.buttonSearch:hover,
+.buttonDeleteBen:hover{
+  cursor: pointer;
+  background-color: var(--red-dark);
+}
+
+.buttonLoad:hover{
+  cursor: pointer;
+  box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.5),
+  inset -1px -1px 3px rgba(0, 0, 0, 0.1);
+}
+/* Manterlo al final para sobre escritura de especificidad */
+.buttonDeleteBen{
+  width: min-content;
+  align-self: flex-end;
+}
+
+.comboboxes{
+  display: block;
+  width: 12.8rem;
+  height: 2rem;
+  font-size: .9375rem;
+}
+
+.inputWidthModal{
+  width: 11.5rem;
+}

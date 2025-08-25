@@ -1,0 +1,43 @@
+.labels{
+  text-align: left;
+}
+
+.asteric{
+  color: var(--red);
+}
+
+.inputContainer {
+  position: relative;
+  text-align: left;
+  transition: margin-bottom 0.3s ease;
+}
+
+.containerError{
+  margin-bottom: 1.5rem;
+}
+
+.inputs{
+  display: block;
+  border: solid 1px var(--gray); 
+  border-radius: .5rem;
+  padding: 4px 11px;
+  width: 13rem;
+  height: 2rem;
+}
+
+.message{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: .75rem;
+  color: red;
+}
+
+.error{
+  border: 1px solid red;
+}
+
+.inputs:focus{
+  border: solid 1px #4096ff !important;
+  outline: none !important;
+}

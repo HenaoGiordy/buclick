@@ -1,0 +1,75 @@
+
+.contentTitle{
+  margin-top: 6.25rem;
+  & h1{
+    font-weight: bold;
+  }
+}
+
+.decorateText{
+  text-decoration: underline;
+}
+
+.cssTable {
+  border-radius: .5rem;
+  border-color: white;
+  overflow-x: auto;
+}
+
+.cssTable thead {
+  background-color: var(--gray);
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+.cssTable th, .cssTable td {
+  padding: 0.5rem 1rem ;
+  background-color: white;
+}
+
+.cssTable th{
+  background-color: #D9D9D9;
+  border-color: #D9D9D9;
+}
+
+.cssTable th:first-child {
+  border-top-left-radius: .5rem;
+}
+
+.cssTable th:last-child {
+  border-top-right-radius: .5rem;
+}
+
+.cssTable tr{
+  border-left-color: #D9D9D9;
+}
+
+.rowInputsTableInit{
+  height: 4.9375rem;
+}
+
+.marginTopEdit{
+  margin: 1.5rem;
+}
+
+.modalFontSizeContent{
+  font-size: 1.5rem;
+}
+
+.modalFontSizeTitle{
+  font-size: 2rem;
+}
+
+/*************************** Controlan el responsive *********************************/
+@media (max-width: 768px) { /*Celuares pequeños y muy pequeños*/
+  html{
+    font-size: clamp(1rem, 3.5vw, 7vw);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) { /*Tablets*/
+  html{
+    font-size: clamp(1rem, 2vw, 4vw);
+  }
+}
+/***********************************************************************************************/

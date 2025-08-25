@@ -1,0 +1,27 @@
+/* Aplica borde rojo solo al selector de Ant Design */
+:global(.error .ant-select-selector) {
+  border: 1px solid red !important;
+}
+
+
+.container{
+  position: relative;
+  text-align: left;
+  border-radius: .5rem;
+  outline: none;
+  transition: margin-bottom 0.3s ease;
+}
+
+.containerError{
+  margin-bottom: 1.5rem; /* Espacio extra para el mensaje */  
+}
+
+.select{
+  width: 13rem;
+  height: 2rem;
+}
+
+.error .ant-select-selector{
+  border: 1px solid red;
+}
+

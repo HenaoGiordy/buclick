@@ -1,0 +1,67 @@
+/*************************** Controlan el responsive *********************************/
+@media (max-width: 768px) { /*Celuares pequeños y muy pequeños*/
+  html{
+    font-size: clamp(1rem, 3.5vw, 7vw);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) { /*Tablets*/
+  html{
+    font-size: clamp(1rem, 2vw, 4vw);
+  }
+}
+/***********************************************************************************************/
+
+.pseudoTableHeader{
+  background-color: #CFCFCF;
+}
+
+.pseudoTableHeader{
+  width: 100%;
+  margin: 0;
+  padding-left: .625rem;
+}
+
+.card{
+  width: 100%;
+  max-width: 37.5rem;
+  margin-top: 0;
+}
+
+/* Rango de ancho específico entre 530px y 768px */
+@media (max-width: 768px) and (min-width: 530px) {
+  .table table {
+    width: 100%; /* Ajusta el ancho mínimo para que no aparezcan columnas vacías */
+  }
+}
+
+.contentTitle{
+  margin-top: 100px;
+  & h1{
+    font-weight: bold;
+  }
+}
+
+.paddingBtn{
+  padding-top: 2px;
+}
+
+.searchInput{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.searchButton{
+  color: white;
+  background-color: var(--red);
+  margin-left: .625rem;
+}
+
+.assistance{
+  font-size: 1rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  /* width: 50px;
+  height: 50px; */
+}

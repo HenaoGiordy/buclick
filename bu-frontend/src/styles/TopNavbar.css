@@ -1,0 +1,153 @@
+/* Estilo del header */
+#univalle-logo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c20e1a; /* Fondo rojo para el header */
+  padding: 0 20px;
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+}
+
+/* Menú de navegación estilo desktop */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Espacio entre los elementos del menú */
+}
+
+.menu ul li {
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: relative;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+/* Subrayado y estilos del botón activo */
+.menu ul li.active {
+  font-weight: bold;
+  color: white;
+}
+
+.menu ul li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Espacio entre la línea y el texto */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Estilo en hover para todos los botones */
+.menu ul li:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.menu ul li:hover {
+  color: #f0f0f0;
+}
+
+/* Estilos del ícono de hamburguesa para pantallas móviles */
+.hamburger-icon {
+  width: 30px;
+  height: 3px;
+  background-color: white; /* Líneas del ícono blancas */
+  margin: 6px 0;
+  transition: all 0.3s;
+}
+
+/* Estilos del ícono de hamburguesa para pantallas móviles */
+.hamburger-menu-button {
+  background-color: #C20E1A !important; /* Aseguramos que el fondo sea rojo */
+ /*  border: none; Sin bordes */
+  padding: 0;
+  display: flex;
+  align-items: center; /* Alinea verticalmente el ícono */
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: none !important; 
+}
+
+.hamburger-menu-button .anticon {
+  color: white !important; /* Mantén las barras del menú blancas */
+}
+
+
+/* Estilo del menú en el Drawer */
+.drawer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer-menu li {
+  cursor: pointer;
+  padding: 10px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* Ajustar el estilo del botón de cerrar sesión */
+/* Ajustar el estilo del botón de cerrar sesión */
+.logout-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto; /* Asegura que se alinee a la derecha */
+}
+
+.logout-container .logout-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* Previene el salto de línea */
+  padding: 8px 12px; /* Ajusta el padding para reducir el tamaño del botón */
+  background-color: transparent; /* Fondo transparente */
+  color: white; /* Color del texto blanco */
+  border: none; /* Sin bordes */
+  font-size: 16px; /* Asegura un tamaño de fuente adecuado */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-container .logout-button:hover {
+  background-color: transparent; /* Eliminar el fondo gris al hacer hover */
+  color: #f0f0f0; /* Cambia el texto a un color más claro en hover */
+  box-shadow: none; /* Eliminar cualquier sombra en hover */
+}
+
+.logout-container .logout-button .anticon {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+}

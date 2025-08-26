@@ -6,6 +6,10 @@ services:
       context: ./bu-backend
       dockerfile: Dockerfile
     container_name: app-backend
+    env_file:
+      - .env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - DB_HOST=${DB_HOST}

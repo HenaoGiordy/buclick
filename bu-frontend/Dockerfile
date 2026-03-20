@@ -24,10 +24,10 @@ RUN echo "VITE_API_URL=$VITE_API_URL" > .env && \
 RUN npm run build
 
 # Etapa 2: Nginx
-FROM nginx:alpine
+FROM nginx:bookworm
 
 # Instalar curl para health checks
-RUN apk add --no-cache curl
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
 
 # Remover configuración por defecto de Nginx
 RUN rm /etc/nginx/conf.d/default.conf

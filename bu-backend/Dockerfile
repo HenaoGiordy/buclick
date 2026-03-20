@@ -1,10 +1,7 @@
 # Etapa 1: Build
-FROM amazoncorretto:17-alpine AS builder
+FROM maven:3.9.9-eclipse-temurin-17 AS builder
 
 WORKDIR /app
-
-# Instalar Maven
-RUN apk add --no-cache maven
 
 # Copiar archivos de configuración
 COPY pom.xml .
@@ -19,12 +16,12 @@ COPY src src
 RUN mvn clean package -DskipTests
 
 # Etapa 2: Runtime
-FROM amazoncorretto:17-alpine
+FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
 # Instalar curl para health checks
-RUN apk add --no-cache curl
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
 
 # Copiar JAR desde la etapa de build
 COPY --from=builder /app/target/*.jar app.jar

@@ -4,7 +4,7 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/buclick/', // <-- ¡ESTA ES LA LÍNEA QUE DEBES AGREGAR!
+  base: '/',
   plugins: [react(), svgr()],
   css: {
     modules: {
